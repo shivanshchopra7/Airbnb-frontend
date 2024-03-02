@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+  <header>
+    <div class="grid grid-cols-3 md:px-16  w-screen h-20 border-b-2   items-center fixed bg-white top-0 ">
+      <img src="airbnb-logo.png" alt="" class="md:h-16 md:w-28 hidden md:block  " />
+      
+      <div class="flex  md:justify-evenly items-center  border rounded-full shadow-md md:h-12 md:w-96 w-80 px-2 h-12 md:px-0 ml-10  ">
+        <button class="border-r-2 text-sm font-medium px-4 ">Anywhere</button>
+        <button class="border-r-2 text-sm font-medium px-4">Any week</button>
+        <button class="text-sm font-medium text-gray-500 px-4">Add guests</button>
+        <i class="fa-solid fa-magnifying-glass bg-red-500 text-white rounded-full p-2  "></i>
+      </div>
+      <div class="md:flex md:items-center md:justify-end md:space-x-8 hidden">
+        <button class="text-sm font-medium">Airbnb your home</button>
+        <span class="material-symbols-outlined text-sm">language</span>
+        <div class="flex items-center justify-evenly gap-2 rounded-full border shadow-md h-10 w-20 py-1 pr-1 pl-2">
+          <i class="fa-solid fa-bars"></i>
+          <button class="bg-black text-white rounded-full text-center w-7 h-7 text-[10px] font-semibold">E</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Bar -->
+    <div class="flex items-center h-24 space-x-5 top-20 fixed bg-white md:w-screen md:flex-wrap">
+      <div class="flex items-center justify-center space-x-10 ">
+<div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 md:pl-16 pl-2">
+<img src="/type1.jpeg" alt="" class="h-6 w-6" />
+<p class="text-xs font-normal">Amazing Pools</p>
+</div>
+
+
+  <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2">
+  <img src="/type2.jpeg" alt="" class="h-6 w-6" />
+  <p class="text-xs font-normal">Earth homes</p>
+</div>
+
+ 
+    <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2">
+    <img src="/type3.jpeg" alt="" class="h-6 w-6" />
+    <p class="text-xs font-normal">Rooms</p>
+</div>   
+
+   
+      <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+      <img src="/type4.jpeg" alt="" class="h-6 w-6" />
+      <p class="text-xs font-normal">castles</p>
+   </div>
+
+     
+        <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2">
+        <img src="/type5.jpeg" alt="" class="h-6 w-6" />
+        <p class="text-xs font-normal">Amazing Views</p>
+        </div>
+
+        
+          <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+          <img src="/type6.jpeg" alt="" class="h-6 w-6" />
+          <p class="text-xs font-normal">Luxe</p>
+          </div>
+
+          
+            <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+            <img src="/type7.jpeg" alt="" class="h-6 w-6" />
+            <p class="text-xs font-normal">Golfing</p>
+            </div>
+
+           
+              <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+              <img src="/type8.jpeg" alt="" class="h-6 w-6" />
+              <p class="text-xs font-normal">National Park</p>
+            </div>
+
+              
+                <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+                <img src="/type9.jpeg" alt="" class="h-6 w-6" />
+                <p class="text-xs font-normal">Caves</p>
+               </div>
+
+
+                
+                  <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+                  <img src="/type10.jpeg" alt="" class="h-6 w-6" />
+                  <p class="text-xs font-normal">Historical homes</p>
+                 </div>
+
+                  
+                    <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+                    <img src="/type11.jpeg" alt="" class="h-6 w-6" />
+                    <p class="text-xs font-normal">Lake</p>
+                   </div>
+
+
+                    
+                      <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 ">
+                      <img src="/type12.jpeg" alt="" class="h-6 w-6" />
+                      <p class="text-xs font-normal">Camping</p>
+                      </div>
+      </div>
+     <span class="material-symbols-outlined pl-4">arrow_circle_right</span>
+      <div class="flex justify-around items-center rounded-xl shadow-md h-12 w-24 border">
+        <span class="material-symbols-outlined pl-2">sync_alt</span>
+        <p class="text-xs font-medium pr-2">Filters</p>
+      </div>
+    </div>
+
+<!-- Price bar -->
+<div class="flex md:justify-center md:mt-48 mt-40 ">
+<div class="md:flex justify-between items-center p-4 border rounded-xl w-[600px] h-16 hidden">
+<div class="md:flex justify-start  ">
+<p class="border-r-2 border-gray-100 pr-4 text-base font-medium">Display total price</p>
+<p class="pl-4 text-gray-400 text-base pr-4"> Includes all fees, before taxes</p>
+
+</div>
+<span class="material-symbols-outlined">toggle_off</span>
+</div>
+
+</div>
+  </header>
+
+  <!-- Hotel -->
+  <main class="mt-8 md:mx-10 mx-10 px-2 ">
+<div class="md:grid md:grid-cols-4 flex flex-col">
+<div class="flex flex-col h-96 w-72 ">
+<img src="/img1.jpg" alt="" class="w-72 h-64 rounded-xl"  />
+<div class="flex justify-between mt-2">
+<p class="text-sm font-medium">Lonavla, India</p>
+<div class="flex">
+  <i class="fa-solid fa-star"></i>
+  <p class="text-sm font-light">5.0</p>
+</div>
+
+</div>
+<p class="text-sm text-gray-400">62 kilometeres away</p>
+<p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+<p class="text-sm font-medium mt-2 ">₹42,701 night</p>
+</div>
+
+<div class="flex flex-col h-96 w-72">
+  <img src="/img2.jpg" alt="" class="w-72 h-64 rounded-xl " />
+  <div class="flex justify-between mt-2">
+  <p class="text-sm font-medium">Mumai, India</p>
+  <div class="flex">
+    <i class="fa-solid fa-star"></i>
+    <p class="text-sm font-light">4.0</p>
+  </div>
+  
+  </div>
+  <p class="text-sm text-gray-400">2 kilometeres away</p>
+  <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+  <p class="text-sm font-medium mt-2">₹42,701 night</p>
+  </div>
+
+  <div class="flex flex-col h-96 w-72">
+    <img src="/img3.jpg" alt="" class="w-72 h-64 rounded-xl" />
+    <div class="flex justify-between mt-2">
+    <p class="text-sm font-medium">Shimla, India</p>
+    <div class="flex">
+      <i class="fa-solid fa-star"></i>
+      <p class="text-sm font-light">4.2</p>
+    </div>
+    
+    </div>
+    <p class="text-sm text-gray-400">69 kilometeres away</p>
+    <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+    <p class="text-sm font-medium mt-2">₹42,701 night</p>
+    </div>
+
+    <div class="flex flex-col h-96 w-72">
+      <img src="/img4.jpg" alt="" class="w-72 h-64 rounded-xl" />
+      <div class="flex justify-between mt-2">
+      <p class="text-sm font-medium">Himachal Pradesh, India</p>
+      <div class="flex">
+        <i class="fa-solid fa-star"></i>
+        <p class="text-sm font-light">3.0</p>
+      </div>
+      
+      </div>
+      <p class="text-sm text-gray-400">62 kilometeres away</p>
+      <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+      <p class="text-sm font-medium mt-2">₹42,701 night</p>
+      </div>
+
+      <div class="flex flex-col h-96 w-72">
+        <img src="/img2.jpg" alt="" class="w-72 h-64 rounded-xl" />
+        <div class="flex justify-between mt-2">
+        <p class="text-sm font-medium">Himachal Pradesh, India</p>
+        <div class="flex">
+          <i class="fa-solid fa-star"></i>
+          <p class="text-sm font-light">3.0</p>
+        </div>
+        
+        </div>
+        <p class="text-sm text-gray-400">62 kilometeres away</p>
+        <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+        <p class="text-sm font-medium mt-2">₹42,701 night</p>
+        </div>
+
+        <div class="flex flex-col h-96 w-72">
+          <img src="/img3.jpg" alt="" class="w-72 h-64 rounded-xl" />
+          <div class="flex justify-between mt-2">
+          <p class="text-sm font-medium">Mumai, India</p>
+          <div class="flex">
+            <i class="fa-solid fa-star"></i>
+            <p class="text-sm font-light">4.0</p>
+          </div>
+          
+          </div>
+          <p class="text-sm text-gray-400">2 kilometeres away</p>
+          <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+          <p class="text-sm font-medium mt-2">₹42,701 night</p>
+          </div>
+        
+          <div class="flex flex-col h-96 w-72">
+            <img src="/img4.jpg" alt="" class="w-72 h-64 rounded-xl" />
+            <div class="flex justify-between mt-2">
+            <p class="text-sm font-medium">Shimla, India</p>
+            <div class="flex">
+              <i class="fa-solid fa-star"></i>
+              <p class="text-sm font-light">4.2</p>
+            </div>
+            
+            </div>
+            <p class="text-sm text-gray-400">69 kilometeres away</p>
+            <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+            <p class="text-sm font-medium mt-2">₹42,701 night</p>
+            </div>
+        
+            <div class="flex flex-col h-96 w-72">
+              <img src="/img1.jpg" alt="" class="w-72 h-64 rounded-xl" />
+              <div class="flex justify-between mt-2">
+              <p class="text-sm font-medium">Himachal Pradesh, India</p>
+              <div class="flex">
+                <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-light">3.0</p>
+              </div>
+              
+              </div>
+              <p class="text-sm text-gray-400">62 kilometeres away</p>
+              <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+              <p class="text-sm font-medium mt-2">₹42,701 night</p>
+              </div>
+        
+              <div class="flex flex-col h-96 w-72">
+                <img src="/img2.jpg" alt="" class="w-72 h-64 rounded-xl" />
+                <div class="flex justify-between mt-2">
+                <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                <div class="flex">
+                  <i class="fa-solid fa-star"></i>
+                  <p class="text-sm font-light">3.0</p>
+                </div>
+                
+                </div>
+                <p class="text-sm text-gray-400">62 kilometeres away</p>
+                <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                <p class="text-sm font-medium mt-2">₹42,701 night</p>
+                </div>
+
+                <div class="flex flex-col h-96 w-72">
+                  <img src="/img3.jpg" alt="" class="w-72 h-64 rounded-xl" />
+                  <div class="flex justify-between mt-2">
+                  <p class="text-sm font-medium">Shimla, India</p>
+                  <div class="flex">
+                    <i class="fa-solid fa-star"></i>
+                    <p class="text-sm font-light">4.2</p>
+                  </div>
+                  
+                  </div>
+                  <p class="text-sm text-gray-400">69 kilometeres away</p>
+                  <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                  <p class="text-sm font-medium mt-2">₹42,701 night</p>
+                  </div>
+              
+                  <div class="flex flex-col h-96 w-72">
+                    <img src="/img4.jpg" alt="" class="w-72 h-64 rounded-xl" />
+                    <div class="flex justify-between mt-2">
+                    <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                    <div class="flex">
+                      <i class="fa-solid fa-star"></i>
+                      <p class="text-sm font-light">3.0</p>
+                    </div>
+                    
+                    </div>
+                    <p class="text-sm text-gray-400">62 kilometeres away</p>
+                    <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                    <p class="text-sm font-medium mt-2">₹42,701 night</p>
+                    </div>
+              
+                    <div class="flex flex-col h-96 w-72">
+                      <img src="/img1.jpg" alt="" class="w-72 h-64 rounded-xl" />
+                      <div class="flex justify-between mt-2">
+                      <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                      <div class="flex">
+                        <i class="fa-solid fa-star"></i>
+                        <p class="text-sm font-light">3.0</p>
+                      </div>
+                      
+                      </div>
+                      <p class="text-sm text-gray-400">62 kilometeres away</p>
+                      <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                      <p class="text-sm font-medium mt-2">₹42,701 night</p>
+                      </div>
+
+                      <div class="flex flex-col h-96 w-72">
+                        <img src="/img1.jpg" alt="" class="w-72 h-64 rounded-xl" />
+                        <div class="flex justify-between mt-2">
+                        <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                        <div class="flex">
+                          <i class="fa-solid fa-star"></i>
+                          <p class="text-sm font-light">3.0</p>
+                        </div>
+                        
+                        </div>
+                        <p class="text-sm text-gray-400">62 kilometeres away</p>
+                        <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                        <p class="text-sm font-medium mt-2">₹42,701 night</p>
+                        </div>
+                  
+                        <div class="flex flex-col h-96 w-72">
+                          <img src="/img2.jpg" alt="" class="w-72 h-64 rounded-xl" />
+                          <div class="flex justify-between mt-2">
+                          <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                          <div class="flex">
+                            <i class="fa-solid fa-star"></i>
+                            <p class="text-sm font-light">3.0</p>
+                          </div>
+                          
+                          </div>
+                          <p class="text-sm text-gray-400">62 kilometeres away</p>
+                          <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                          <p class="text-sm font-medium mt-2">₹42,701 night</p>
+                          </div>
+          
+                          <div class="flex flex-col h-96 w-72">
+                            <img src="/img3.jpg" alt="" class="w-72 h-64 rounded-xl" />
+                            <div class="flex justify-between mt-2">
+                            <p class="text-sm font-medium">Shimla, India</p>
+                            <div class="flex">
+                              <i class="fa-solid fa-star"></i>
+                              <p class="text-sm font-light">4.2</p>
+                            </div>
+                            
+                            </div>
+                            <p class="text-sm text-gray-400">69 kilometeres away</p>
+                            <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                            <p class="text-sm font-medium mt-2">₹42,701 night</p>
+                            </div>
+                        
+                            <div class="flex flex-col h-96 w-72">
+                              <img src="/img4.jpg" alt="" class="w-72 h-64 rounded-xl" />
+                              <div class="flex justify-between mt-2">
+                              <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                              <div class="flex">
+                                <i class="fa-solid fa-star"></i>
+                                <p class="text-sm font-light">3.0</p>
+                              </div>
+                              
+                              </div>
+                              <p class="text-sm text-gray-400">62 kilometeres away</p>
+                              <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+                              <p class="text-sm font-medium mt-2">₹42,701 night</p>
+                              </div>
+</div>
+
+  </main>
+
+  <footer class="md:hidden fixed bottom-0 w-full bg-white flex justify-evenly items-center p-4 h-14 rounded-t-2xl">
+    <div>
+      <!-- Explore -->
+      <button class="flex flex-col items-center focus:outline-none">
+        <img src="002-search-interface-symbol.png" alt="Explore" class="h-6 w-6 mb-1 ">
+        <span class="text-xs">Explore</span>
+      </button>
+    </div>
+    <div>
+      <!-- Wishlist -->
+      <button class="flex flex-col items-center focus:outline-none">
+        <img src="001-heart.png" alt="Wishlist" class="h-6 w-6 mb-1">
+        <span class="text-xs">Wishlist</span>
+      </button>
+    </div>
+    <div>
+      <!-- Login -->
+      <button class="flex flex-col items-center focus:outline-none">
+        <img src="003-user.png" alt="Login" class="h-6 w-6 mb-1">
+        <span class="text-xs">Login</span>
+      </button>
+    </div>
+  </footer>
+
+  <footer class="hidden h-12  md:fixed bottom-0 w-screen bg-white md:flex  flex-col md:flex-row justify-between items-center md:px-10 px-2">
+    <div class="flex md:space-x-2 space-x-3 text-sm font-base">
+        <p >© 2023 Airbnb, Inc.</p>
+        <p>·</p>
+        <p>Privacy</p>
+        <p>·</p>
+        <p>Terms</p>
+        <p>·</p>
+        <p>Sitemap</p>
+        <p>·</p>
+        <p class="text-wrap">Company details</p>
+    </div>
+    <div class="md:flex md:space-x-4 md:text-sm md:font-medium hidden">
+        <span class="material-symbols-outlined">language</span>
+        <p>English(IN)</p>
+        <p>₹ INR</p>
+        <p>Support & resources</p>
+    </div>
+</footer>
+
+</body>
+</html>
