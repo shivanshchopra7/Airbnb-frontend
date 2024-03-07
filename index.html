@@ -37,7 +37,7 @@
 
 .selected {
  color: white;
-  
+
   
   border: 1px solid red; /* Added red border */
   border-radius: 10px; /* Border radius to create curved corners */
@@ -223,9 +223,9 @@
   <!-- Hotel -->
   <main class="mt-8 md:ml-14   md:px-12 flex md:block justify-center items-center ">
 <div class="md:grid md:grid-cols-4 flex flex-col  ">
-  <div class="flex flex-col mt-8 h-96 md:w-72 w-96   ">
-    <div class="carousel">
-      <div class="slides">
+  <div class="flex flex-col md:mt-0 mt-8 h-96 md:w-72 w-96   ">
+    <!-- <div class="carousel">
+      <div class="slides"> -->
         <img src="/img1.jpg" alt="" class="w-96 h-64 rounded-xl" />
         <!-- Add more images here -->
         <!-- <img src="/img2.jpg" class="w-96 h-64 rounded-xl" />
@@ -233,10 +233,10 @@
         <!-- Add more images here -->
         <!-- <img src="/img2.jpg" class="w-96 h-64 rounded-xl" /> -->
 
-      </div>
+      <!-- </div> -->
       <!-- <button class="carousel-control prev">&lt;</button>
       <button class="carousel-control next">&gt;</button> -->
-    </div>
+    <!-- </div> -->
   
     <div class="flex justify-between mt-2">
       <p class="text-sm font-medium">Lonavla, India</p>
@@ -554,25 +554,25 @@ function selectOption(option) {
 
 
 
-const prevButton = document.querySelector('.prev');
-  const nextButton = document.querySelector('.next');
-  const slides = document.querySelector('.slides');
+// const prevButton = document.querySelector('.prev');
+//   const nextButton = document.querySelector('.next');
+//   const slides = document.querySelector('.slides');
 
-  let slideIndex = 0;
+//   let slideIndex = 0;
 
-  function showSlides() {
-    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-  }
+//   function showSlides() {
+//     slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+//   }
 
-  prevButton.addEventListener('click', () => {
-  slideIndex = (slideIndex - 1 + slides.childElementCount) % slides.childElementCount;
-  showSlides();
-});
+//   prevButton.addEventListener('click', () => {
+//   slideIndex = (slideIndex - 1 + slides.childElementCount) % slides.childElementCount;
+//   showSlides();
+// });
 
-  nextButton.addEventListener('click', () => {
-    slideIndex = (slideIndex + 1 + slides.childElementCount) % slides.childElementCount;
-    showSlides();
-  });
+//   nextButton.addEventListener('click', () => {
+//     slideIndex = (slideIndex + 1 + slides.childElementCount) % slides.childElementCount;
+//     showSlides();
+//   });
 
 
 
