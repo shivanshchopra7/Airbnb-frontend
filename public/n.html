@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airbnb Clone</title>
+  <link rel="icon" type="image/x-icon" href="https://www.theriver.asia/wp-content/uploads/2020/01/pngkey.com-airbnb-logo-png-605967.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  </head>
+  <body>
+    
+    <main class="mt-8 md:mx-14 flex md:block justify-center items-center">
+        <div class="md:grid md:grid-cols-4 flex flex-col relative overflow-hidden">
+          <!-- Image carousel -->
+          <div class="carousel relative flex items-center">
+            <!-- Carousel items -->
+            <div class="carousel-inner flex">
+              <img src="/img1.jpg" alt="" class="w-96 h-64 rounded-xl" />
+              <img src="/img2.jpg" alt="" class="w-96 h-64 rounded-xl" />
+              <img src="/img3.jpg" alt="" class="w-96 h-64 rounded-xl" />
+              <!-- Add more images as needed -->
+            </div>
+            <!-- Navigation arrows -->
+            <button class="carousel-prev absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full w-8 h-8 flex justify-center items-center">
+              &lt;
+            </button>
+            <button class="carousel-next absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 rounded-full w-8 h-8 flex justify-center items-center">
+              &gt;
+            </button>
+          </div>
+          <!-- Description -->
+          <div class="flex flex-col h-96 md:w-72 w-auto">
+            <p class="text-sm font-medium">Shimla, India</p>
+            <div class="flex justify-between mt-2">
+              <div class="flex items-center">
+                <i class="fa-solid fa-star"></i>
+                <p class="text-sm font-light">4.2</p>
+              </div>
+              <p class="text-sm text-gray-400">69 kilometers away</p>
+            </div>
+            <p class="text-sm text-gray-400">30 Jul - 4 Aug</p>
+            <p class="text-sm font-medium mt-2" data-original-price="45900">₹45,900 per night</p>
+          </div>
+        </div>
+      </main>
+      
+      
+      <script>
+       document.addEventListener("DOMContentLoaded", function () {
+  const carouselInner = document.querySelector(".carousel-inner");
+  const carouselItems = document.querySelectorAll(".carousel-inner img");
+  const prevBtn = document.querySelector(".carousel-prev");
+  const nextBtn = document.querySelector(".carousel-next");
+  const itemWidth = carouselItems[0].clientWidth;
+  const containerWidth = carouselInner.clientWidth;
+  let index = 0;
+
+  // Move carousel to next image
+  nextBtn.addEventListener("click", function () {
+    index++;
+    if (index >= carouselItems.length) {
+      index = 0;
+    }
+    const translateValue = -itemWidth * index;
+    const maxTranslateValue = -(carouselItems.length - Math.floor(containerWidth / itemWidth)) * itemWidth;
+    carouselInner.style.transform = `translateX(${Math.max(translateValue, maxTranslateValue)}px)`;
+  });
+
+  // Move carousel to previous image
+  prevBtn.addEventListener("click", function () {
+    index--;
+    if (index < 0) {
+      index = carouselItems.length - 1;
+    }
+    const translateValue = -itemWidth * index;
+    carouselInner.style.transform = `translateX(${Math.min(0, translateValue)}px)`;
+  });
+});
+
+      </script>
+  </body>
