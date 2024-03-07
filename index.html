@@ -30,19 +30,14 @@
       display: block; /* Display the overlay when hovered */
     }
 
-    .selected img {
-  padding: 1px;
-  border-radius: 30%;
-}
+
 
 .selected {
- color: white;
+
 
   
-  border: 1px solid red; /* Added red border */
-  border-radius: 10px; /* Border radius to create curved corners */
-        padding: 10px; /* Padding to create space between text and border */
-        background-color:crimson;
+ 
+  border-bottom: 2px solid black;
 }
 
 
@@ -55,7 +50,8 @@
         padding: 3px; /* Padding to create space between text and border */
         padding-left: 5px;
         padding-right: 5px;
-        background-color:silver;
+        color: black;
+        background-color: whitesmoke;
 }
     /* .carousel {
     position: relative;
@@ -86,6 +82,12 @@
     right: 10px;
    
   }
+
+  @layer utilities {
+            .scrollbar-none::-webkit-scrollbar {
+                display: none;
+            }
+        }
 </style>
 </head>
 <body>
@@ -93,10 +95,10 @@
     <div class="grid grid-cols-3 md:px-16  w-screen h-20 border-b-2   items-center fixed bg-white top-0 ">
       <img src="/airbnb-logo.png" alt="" class="md:h-16 md:w-28 hidden md:block  " />
       
-      <div class="flex  md:justify-evenly items-center  border rounded-full shadow-md md:h-12 md:w-96 w-96  h-12 md:px-0 px-4 mx-4 hover:bg-gray-100  ">
-        <button class="border-r-2 text-sm font-medium px-4 hover:underline">Anywhere</button>
-        <button class="border-r-2 text-sm font-medium px-4 hover:underline">Any week</button>
-        <button class="text-sm font-medium text-gray-500 px-4 hover:underline">Add guests</button>
+      <div class="flex  md:justify-evenly items-center  border rounded-full shadow-md md:h-12 md:w-96 w-screen h-12 md:px-0  justify-center  hover:bg-gray-100  ">
+        <button class="border-r-2 text-md font-medium px-4  hover:underline">Anywhere</button>
+        <button class="border-r-2 text-md font-medium px-4 hover:underline">Any week</button>
+        <button class="text-md font-medium text-gray-500 px-4 hover:underline">Add guests</button>
         <i class="fa-solid fa-magnifying-glass bg-red-500 text-white rounded-full p-2 cursor-pointer "></i>
       </div>
       <div class="md:flex md:items-center md:justify-end md:space-x-8 hidden">
@@ -111,82 +113,82 @@
 
     <!-- Category Bar -->
     
-    <div class="flex items-center h-28 space-x-5 top-20 fixed pl-4 bg-white md:w-screen md:flex-wrap overflow-x-auto md:overflow-x-hidden w-screen">
+    <div class="flex items-center h-28 space-x-5 top-20 fixed pl-4 bg-white md:w-screen md:flex-wrap scrollbar-none overflow-x-auto md:overflow-x-hidden w-screen">
       <div class="flex items-center justify-center space-x-10 md:pl-16">
-        <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2  cursor-none selected" onclick="selectOption(this)" id="select-btn" >
+        <div class="flex flex-col items-center text-gray-400  gap-2  cursor-none selected" onclick="selectOption(this)" id="select-btn" >
         <img src="/type1.jpeg" alt="" class="h-6 w-6"  /> 
           <p class="text-xs font-normal">Amazing Pools</p>
         
         </div>
         <!-- Repeat the above div structure for other options -->
-        <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none" onclick="selectOption(this)" id="select-btn">
+        <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none" onclick="selectOption(this)" id="select-btn">
           <img src="/type2.jpeg" alt="" class="h-6 w-6" />
           <p class="text-xs font-normal">Earth homes</p>
         </div>
         
          
-            <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none" onclick="selectOption(this)" id="select-btn">
+            <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none" onclick="selectOption(this)" id="select-btn">
             <img src="/type3.jpeg" alt="" class="h-6 w-6" />
             <p class="text-xs font-normal">Rooms</p>
         </div>   
         
            
-              <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none" onclick="selectOption(this)" id="select-btn">
+              <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none" onclick="selectOption(this)" id="select-btn">
               <img src="/type4.jpeg" alt="" class="h-6 w-6" />
               <p class="text-xs font-normal">Castles</p>
            </div>
         
              
-                <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none" onclick="selectOption(this)" id="select-btn">
+                <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none" onclick="selectOption(this)" id="select-btn">
                 <img src="/type5.jpeg" alt="" class="h-6 w-6" />
                 <p class="text-xs font-normal">Amazing Views</p>
                 </div>
         
                 
-                  <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none" onclick="selectOption(this)" id="select-btn">
+                  <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none" onclick="selectOption(this)" id="select-btn">
                   <img src="/type6.jpeg" alt="" class="h-6 w-6" />
                   <p class="text-xs font-normal">Luxe</p>
                   </div>
         
                   
-                    <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
+                    <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
                     <img src="/type7.jpeg" alt="" class="h-6 w-6" />
                     <p class="text-xs font-normal">Golfing</p>
                     </div>
         
                    
-                      <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
+                      <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
                       <img src="/type8.jpeg" alt="" class="h-6 w-6" />
                       <p class="text-xs font-normal">National Park</p>
                     </div>
         
                       
-                        <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
+                        <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
                         <img src="/type9.jpeg" alt="" class="h-6 w-6" />
                         <p class="text-xs font-normal">Caves</p>
                        </div>
         
         
                         
-                          <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
+                          <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
                           <img src="/type10.jpeg" alt="" class="h-6 w-6" />
                           <p class="text-xs font-normal">Historical homes</p>
                          </div>
         
                           
-                            <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
+                            <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
                             <img src="/type11.jpeg" alt="" class="h-6 w-6" />
                             <p class="text-xs font-normal">Lake</p>
                            </div>
         
         
                             
-                              <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
+                              <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
                               <img src="/sunset.png" alt="" class="h-6 w-6" />
                               <p class="text-xs font-normal">Sunset View</p>
                               </div>
         
-                              <div class="flex flex-col items-center text-gray-400 hover:text-black gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
+                              <div class="flex flex-col items-center text-gray-400  gap-2 cursor-none " onclick="selectOption(this)" id="select-btn">
                                 <img src="/wave.png" alt="" class="h-6 w-6" />
                                 <p class="text-xs font-normal">Beach</p>
                                 </div>
@@ -239,7 +241,7 @@
     <!-- </div> -->
   
     <div class="flex justify-between mt-2">
-      <p class="text-sm font-medium">Lonavla, India</p>
+      <p class="text-md font-medium">Lonavla, India</p>
       <div class="flex">
         <i class="fa-solid fa-star"></i>
         <p class="text-sm font-light">5.0</p>
@@ -258,7 +260,7 @@
     <img src="/img2.jpg" alt="" class="w-96 h-64 rounded-xl" />
   
   <div class="flex justify-between mt-2">
-  <p class="text-sm font-medium">Mumbai, India</p>
+  <p class="text-md font-medium">Mumbai, India</p>
   <div class="flex">
     <i class="fa-solid fa-star"></i>
     <p class="text-sm font-light">4.0</p>
@@ -273,7 +275,7 @@
   <div class="flex flex-col h-96  md:w-72 w-auto">
     <img src="/img3.jpg" alt="" class="w-96 h-64 rounded-xl" />
     <div class="flex justify-between mt-2">
-    <p class="text-sm font-medium">Shimla, India</p>
+    <p class="text-md font-medium">Shimla, India</p>
     <div class="flex">
       <i class="fa-solid fa-star"></i>
       <p class="text-sm font-light">4.2</p>
@@ -288,7 +290,7 @@
     <div class="flex flex-col h-96  md:w-72 w-auto">
       <img src="/img4.jpg" alt="" class="w-96 h-64 rounded-xl" />
       <div class="flex justify-between mt-2">
-      <p class="text-sm font-medium">Himachal Pradesh, India</p>
+      <p class="text-md font-medium">Himachal Pradesh, India</p>
       <div class="flex">
         <i class="fa-solid fa-star"></i>
         <p class="text-sm font-light">3.0</p>
@@ -303,7 +305,7 @@
       <div class="flex flex-col h-96  md:w-72 w-auto">
         <img src="/img2.jpg" alt="" class="w-96 h-64 rounded-xl" />
         <div class="flex justify-between mt-2">
-        <p class="text-sm font-medium">Himachal Pradesh, India</p>
+        <p class="text-md font-medium">Himachal Pradesh, India</p>
         <div class="flex">
           <i class="fa-solid fa-star"></i>
           <p class="text-sm font-light">3.0</p>
@@ -318,7 +320,7 @@
         <div class="flex flex-col h-96  md:w-72 w-auto">
           <img src="/img3.jpg" alt="" class="w-96 h-64 rounded-xl" />
           <div class="flex justify-between mt-2">
-          <p class="text-sm font-medium">Mumai, India</p>
+          <p class="text-md font-medium">Mumai, India</p>
           <div class="flex">
             <i class="fa-solid fa-star"></i>
             <p class="text-sm font-light">4.0</p>
@@ -333,7 +335,7 @@
           <div class="flex flex-col h-96  md:w-72 w-auto">
             <img src="/img4.jpg" alt="" class="w-96 h-64 rounded-xl" />
             <div class="flex justify-between mt-2">
-            <p class="text-sm font-medium">Shimla, India</p>
+            <p class="text-md font-medium">Shimla, India</p>
             <div class="flex">
               <i class="fa-solid fa-star"></i>
               <p class="text-sm font-light">4.2</p>
@@ -348,7 +350,7 @@
             <div class="flex flex-col h-96 md:w-72 w-auto">
               <img src="/img1.jpg" alt="" class="w-96 h-64 rounded-xl" />
               <div class="flex justify-between mt-2">
-              <p class="text-sm font-medium">Himachal Pradesh, India</p>
+              <p class="text-md font-medium">Himachal Pradesh, India</p>
               <div class="flex">
                 <i class="fa-solid fa-star"></i>
                 <p class="text-sm font-light">3.0</p>
@@ -363,7 +365,7 @@
               <div class="flex flex-col h-96  md:w-72 w-auto">
                 <img src="/img2.jpg" alt="" class="w-96 h-64 rounded-xl" />
                 <div class="flex justify-between mt-2">
-                <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                <p class="text-md font-medium">Himachal Pradesh, India</p>
                 <div class="flex">
                   <i class="fa-solid fa-star"></i>
                   <p class="text-sm font-light">3.0</p>
@@ -378,7 +380,7 @@
                 <div class="flex flex-col h-96  md:w-72 w-auto">
                   <img src="/img3.jpg" alt="" class="w-96 h-64 rounded-xl" />
                   <div class="flex justify-between mt-2">
-                  <p class="text-sm font-medium">Shimla, India</p>
+                  <p class="text-md font-medium">Shimla, India</p>
                   <div class="flex">
                     <i class="fa-solid fa-star"></i>
                     <p class="text-sm font-light">4.2</p>
@@ -393,7 +395,7 @@
                   <div class="flex flex-col h-96 md:w-72 w-auto">
                     <img src="/img4.jpg" alt="" class="w-96 h-64 rounded-xl" />
                     <div class="flex justify-between mt-2">
-                    <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                    <p class="text-md font-medium">Himachal Pradesh, India</p>
                     <div class="flex">
                       <i class="fa-solid fa-star"></i>
                       <p class="text-sm font-light">3.0</p>
@@ -408,7 +410,7 @@
                     <div class="flex flex-col h-96 md:w-72 w-auto">
                       <img src="/img1.jpg" alt="" class="w-96 h-64 rounded-xl" />
                       <div class="flex justify-between mt-2">
-                      <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                      <p class="text-md font-medium">Himachal Pradesh, India</p>
                       <div class="flex">
                         <i class="fa-solid fa-star"></i>
                         <p class="text-sm font-light">3.0</p>
@@ -423,7 +425,7 @@
                       <div class="flex flex-col h-96  md:w-72 w-auto">
                         <img src="/img1.jpg" alt="" class="w-96 h-64 rounded-xl" />
                         <div class="flex justify-between mt-2">
-                        <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                        <p class="text-md font-medium">Himachal Pradesh, India</p>
                         <div class="flex">
                           <i class="fa-solid fa-star"></i>
                           <p class="text-sm font-light">3.0</p>
@@ -438,7 +440,7 @@
                         <div class="flex flex-col h-96  md:w-72 w-auto">
                           <img src="/img2.jpg" alt="" class="w-96 h-64 rounded-xl" />
                           <div class="flex justify-between mt-2">
-                          <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                          <p class="text-md font-medium">Himachal Pradesh, India</p>
                           <div class="flex">
                             <i class="fa-solid fa-star"></i>
                             <p class="text-sm font-light">3.0</p>
@@ -453,7 +455,7 @@
                           <div class="flex flex-col h-96  md:w-72 w-auto">
                             <img src="/img3.jpg" alt="" class="w-96 h-64 rounded-xl" />
                             <div class="flex justify-between mt-2">
-                            <p class="text-sm font-medium">Shimla, India</p>
+                            <p class="text-md font-medium">Shimla, India</p>
                             <div class="flex">
                               <i class="fa-solid fa-star"></i>
                               <p class="text-sm font-light">4.2</p>
@@ -468,7 +470,7 @@
                             <div class="flex flex-col h-96  md:w-72 w-auto">
                               <img src="/img4.jpg" alt="" class="w-96 h-64 rounded-xl" />
                               <div class="flex justify-between mt-2">
-                              <p class="text-sm font-medium">Himachal Pradesh, India</p>
+                              <p class="text-md font-medium">Himachal Pradesh, India</p>
                               <div class="flex">
                                 <i class="fa-solid fa-star"></i>
                                 <p class="text-sm font-light">3.0</p>
